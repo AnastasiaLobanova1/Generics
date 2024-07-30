@@ -40,16 +40,18 @@ public class AviaSoulsTest {
         Ticket[] actual = tickets;
         Assertions.assertArrayEquals(expected, actual);
     }
+
     @Test
     public void testTicketSearch() {
-Ticket[] expected = {ticket2,ticket3,ticket1,ticket4};
-        Ticket[] actual = aviaSouls.search("Екатеринбург","Москва");
+        Ticket[] expected = {ticket2, ticket3, ticket1, ticket4};
+        Ticket[] actual = aviaSouls.search("Екатеринбург", "Москва");
         Assertions.assertArrayEquals(expected, actual);
     }
+
     @Test
     public void testTicketSearchAndSort() {
-        Ticket[] expected = {ticket4,ticket1,ticket3,ticket2};
-        Ticket[] actual = aviaSouls.searchAndSortBy("Екатеринбург","Москва", ticketTimeComparator);
+        Ticket[] expected = {ticket4, ticket1, ticket3, ticket2};
+        Ticket[] actual = aviaSouls.searchAndSortBy("Екатеринбург", "Москва", ticketTimeComparator);
         Assertions.assertArrayEquals(expected, actual);
     }
 }
